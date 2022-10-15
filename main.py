@@ -2,8 +2,7 @@
 
 def calculate(n1, n2, op):
     answer = 0
-    success = True
-        
+
     if op == '+':
         answer = n1 + n2
     elif op == '-':
@@ -15,9 +14,9 @@ def calculate(n1, n2, op):
     elif op == '/':
         answer = n1 / n2
     else:
-        success = False
+        raise ValueError("operator " + op + " unknown. Valid operators: + - / * **")
 
-    return (success, answer)
+    return answer
 
 
 
@@ -30,15 +29,14 @@ if __name__ == '__main__':
         n2 = float(input("Enter number: "))
         op = input("Operator: ")
 
-        (success, answer) = calculate(n1, n2, op)
-        
-        if success:
-            print (answer)
-        else:
-            print('operator ' + op + ' unknown, try again')
+        try:
+            answer = calculate(n1, n2, op)
+            print(answer)
+        except ValueError:
+            print("Operator " + op + " doesn't exist. Valid operators: + - * / **")
 
-            
+
         keep_running = input('would you like to continue? (Y/N) ')
-    
+
 
     
