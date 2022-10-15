@@ -21,27 +21,6 @@ def calculate(n1, n2, op):
 
 
 
-def assertEqual(actual, expected, error_message):
-    if actual != expected:
-        print(error_message)
-        return False
-
-    return True
-    
-
-
-
-def test_calculate_can_add_floats():
-    (success, answer) = calculate(1.2, 4.5, '+')
-
-    test_passed = assertEqual(success, True, "test_calculate_can_add_floats failed: success = False")
-    if test_passed:
-        test_passed = assertEqual(answer, 5.7, "test_calculate_can_add_floats failed: answer = " + str(answer))
-
-    return test_passed
-    
-
-
 if __name__ == '__main__':
 
     keep_running = 'Y'
