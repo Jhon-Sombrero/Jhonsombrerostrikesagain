@@ -1,5 +1,21 @@
 import unittest
 from main import calculate
+from main import get_floats_from_expression
+from main import get_operators_from_expression
+
+class TestExpressionParser(unittest.TestCase):
+    def test_get_floats_from_expression_string(self):
+        expr_str = "1 + 2 - 3 + 4"
+        floats = get_floats_from_expression(expr_str)
+        self.assertEqual([1.0, 2.0, 3.0, 4.0], floats)
+    def test_get_operators_from_expression_string(self):
+        expr_str = "1 + 2 - 3 + 4"
+        ops = get_operators_from_expression(expr_str)
+        self.assertEqual(['+', '-', '+'], ops)
+
+    def test_caluclate_expression(self):
+        expr_str = "1 + 2 - 3 + 4"
+
 
 
 class TestCalculator(unittest.TestCase):

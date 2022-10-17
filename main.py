@@ -1,5 +1,4 @@
 
-
 def calculate(n1, n2, op):
     answer = 0
 
@@ -18,25 +17,36 @@ def calculate(n1, n2, op):
 
     return answer
 
+def calculate_expr(floats, ops):
+    res = floats[0]
+    for p in range(0,len(ops)):
+        res = calculate(res, floats[p+1], ops[p])
+    return res
+
+# parse expression to get floats
+def get_floats_from_expression(expr_str):
+    expression = expr_str.split(' ')
+    floats = []
+    for i in range(0, len(expression), 2):
+        floats.append(float(expression[i]))
+
+    return floats
+
+# parse expression to get operators
+def get_operators_from_expression(expr_str):
+    expression = expr_str.split(' ')
+    ops = []
+    for g in range(1, len(expression), 2):
+        ops.append(expression[g])
+    return ops
 
 
 if __name__ == '__main__':
 
     keep_running = 'Y'
-        
-    while keep_running == 'Y':
-        n1 = float(input("Enter number: "))
-        n2 = float(input("Enter number: "))
-        op = input("Operator: ")
 
-        try:
-            answer = calculate(n1, n2, op)
-            print(answer)
-        except ValueError:
-            print("Operator " + op + " doesn't exist. Valid operators: + - * / **")
-
-
-        keep_running = input('would you like to continue? (Y/N) ')
-
-
-    
+    # get expression from user
+    f = input("enter equation: ")
+    floats = get_floats_from_expression(f)
+    ops = get_operators_from_expression(f)
+    print(calculate_expr(floats, ops))
