@@ -1,0 +1,121 @@
+import pygame
+pygame.init()
+screen = pygame.display.set_mode([800, 800])
+running = True
+while running:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+
+
+    screen.fill((10, 10, 10))
+    font_obj = pygame.font.Font('freesansbold.ttf', 8)
+    text_surface_obj = font_obj.render('3', False, 'orange')
+    text_rect_obj = text_surface_obj.get_rect()
+    text_rect_obj.center = (550, 550)
+
+    num_color = (250, 126, 2)
+    op_color = (60, 60, 60)
+
+
+    radius = 75
+    pygame.draw.circle(screen, num_color, (100, 700), radius)
+    pygame.draw.circle(screen, num_color, (250, 700), 75)
+    pygame.draw.circle(screen, num_color, (400, 700), 75)
+    pygame.draw.circle(screen, num_color, (550, 700), 75)
+
+    pygame.draw.circle(screen, num_color, (100, 550), 75)
+    pygame.draw.circle(screen, num_color, (250, 550), 75)
+    pygame.draw.circle(screen, num_color, (400, 550), 75)
+    pygame.draw.circle(screen, num_color, (550, 550), 75)
+    pygame.draw.circle(screen, num_color, (325, 410), 75)
+
+    pygame.draw.circle(screen, op_color, (710, 700), 75)
+    pygame.draw.circle(screen, (60, 60, 60), (710, 685), 75)
+    pygame.draw.circle(screen, (60, 60, 60), (710, 670), 75)
+    pygame.draw.circle(screen, (60, 60, 60), (710, 655), 75)
+    pygame.draw.circle(screen, (60, 60, 60), (710, 640), 75)
+    pygame.draw.circle(screen, (60, 60, 60), (710, 625), 75)
+    pygame.draw.circle(screen, (60, 60, 60), (710, 610), 75)
+    pygame.draw.circle(screen, (60, 60, 60), (710, 455), 75)
+    pygame.draw.circle(screen, (60, 60, 60), (710, 300), 75)
+    pygame.draw.circle(screen, (60, 60, 60), (120, 400), 75)
+    pygame.draw.circle(screen, (60, 60, 60), (525, 400), 75)
+    pygame.draw.circle(screen, (60, 60, 60), (510, 400), 75)
+    pygame.draw.circle(screen, (60, 60, 60), (495, 400), 75)
+    pygame.draw.circle(screen, (60, 60, 60), (480, 400), 75)
+    pygame.draw.circle(screen, (60, 60, 60), (465, 400), 75)
+    pygame.draw.circle(screen, (60, 60, 60), (135, 400), 75)
+    pygame.draw.circle(screen, (60, 60, 60), (150, 400), 75)
+    pygame.draw.circle(screen, (60, 60, 60), (165, 400), 75)
+    pygame.draw.circle(screen, (60, 60, 60), (150, 400), 75)
+    pygame.draw.circle(screen, (60, 60, 60), (135, 400), 75)
+    pygame.draw.circle(screen, (250, 130, 2), (175, 75), 75)
+    pygame.draw.circle(screen, (250, 130, 2), (160, 75), 75)
+    pygame.draw.circle(screen, (250, 130, 2), (145, 75), 75)
+    pygame.draw.circle(screen, (250, 130, 2), (130, 75), 75)
+    pygame.draw.circle(screen, (250, 130, 2), (115, 75), 75)
+    pygame.draw.circle(screen, (250, 130, 2), (100, 75), 75)
+    pygame.draw.circle(screen, (250, 130, 2), (85, 75), 75)
+    pygame.draw.circle(screen, (250, 130, 2), (70, 75), 75)
+    pygame.draw.circle(screen, (250, 130, 2), (55, 75), 75)
+    pygame.draw.circle(screen, (250, 130, 2), (40, 75), 75)
+    pygame.draw.circle(screen, (250, 130, 2), (25, 75), 75)
+    pygame.draw.circle(screen, (250, 130, 2), (10, 75), 75)
+    pygame.draw.circle(screen, (250, 130, 2), (190, 75), 75)
+    pygame.draw.circle(screen, (250, 130, 2), (205, 75), 75)
+    pygame.draw.circle(screen, (250, 130, 2), (220, 75), 75)
+    pygame.draw.circle(screen, (250, 130, 2), (235, 75), 75)
+    pygame.draw.circle(screen, (250, 130, 2), (250, 75), 75)
+    pygame.draw.circle(screen, (250, 130, 2), (265, 75), 75)
+    pygame.draw.circle(screen, (250, 130, 2), (280, 75), 75)
+    pygame.draw.circle(screen, (250, 130, 2), (295, 75), 75)
+    pygame.draw.circle(screen, (250, 130, 2), (310, 75), 75)
+    pygame.draw.circle(screen, (250, 130, 2), (325, 75), 75)
+    pygame.draw.circle(screen, (250, 130, 2), (340, 75), 75)
+    pygame.draw.circle(screen, (250, 130, 2), (355, 75), 75)
+    pygame.draw.circle(screen, (250, 130, 2), (370, 75), 75)
+    pygame.draw.circle(screen, (250, 130, 2), (385, 75), 75)
+    pygame.draw.circle(screen, (250, 130, 2), (400, 75), 75)
+    pygame.draw.circle(screen, (250, 130, 2), (415, 75), 75)
+    pygame.draw.circle(screen, (250, 130, 2), (430, 75), 75)
+    pygame.draw.circle(screen, (250, 130, 2), (445, 75), 75)
+    pygame.draw.circle(screen, (250, 130, 2), (460, 75), 75)
+    pygame.draw.circle(screen, (250, 130, 2), (475, 75), 75)
+    pygame.draw.circle(screen, (250, 130, 2), (490, 75), 75)
+    pygame.draw.circle(screen, (250, 130, 2), (505, 75), 75)
+    pygame.draw.circle(screen, (250, 130, 2), (520, 75), 75)
+    pygame.draw.circle(screen, (250, 130, 2), (535, 75), 75)
+    pygame.draw.circle(screen, (250, 130, 2), (550, 75), 75)
+    pygame.draw.circle(screen, (250, 130, 2), (565, 75), 75)
+    pygame.draw.circle(screen, (250, 130, 2), (580, 75), 75)
+    pygame.draw.circle(screen, (250, 130, 2), (595, 75), 75)
+    pygame.draw.circle(screen, (250, 130, 2), (610, 75), 75)
+    pygame.draw.circle(screen, (250, 130, 2), (625, 75), 75)
+    pygame.draw.circle(screen, (250, 130, 2), (640, 75), 75)
+    pygame.draw.circle(screen, (250, 130, 2), (655, 75), 75)
+    pygame.draw.circle(screen, (250, 130, 2), (670, 75), 75)
+    pygame.draw.circle(screen, (250, 130, 2), (685, 75), 75)
+    pygame.draw.circle(screen, (250, 130, 2), (700, 75), 75)
+    pygame.draw.circle(screen, (250, 130, 2), (715, 75), 75)
+    pygame.draw.circle(screen, (250, 130, 2), (730, 75), 75)
+    pygame.draw.circle(screen, (250, 130, 2), (745, 75), 75)
+    pygame.draw.circle(screen, (250, 130, 2), (760, 75), 75)
+    pygame.draw.circle(screen, (250, 130, 2), (775, 75), 75)
+    pygame.draw.circle(screen, (250, 130, 2), (780, 75), 75)
+    pygame.draw.circle(screen, (250, 130, 2), (795, 75), 75)
+    pygame.draw.circle(screen, (250, 130, 2), (810, 75), 75)
+
+    left_distance = 10
+    top_distance = 20
+    width = 50
+    height = 100
+
+    green = (0, 126, 2)
+
+    rect = pygame.rect.Rect(left_distance, top_distance, width, height)
+    pygame.draw.rect(screen, green, rect)
+
+    pygame.display.flip()
+
+pygame.quit()
